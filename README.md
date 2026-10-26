@@ -26,7 +26,6 @@ Datasets, pretrained weights, and training outputs stay local and are ignored by
 ```text
 EEG2Image/
   things_eeg2/
-  tests/
   train_things_eeg2.ipynb
   training_data/nm000232/
     derivatives/nice_250hz/sub-XX/
@@ -137,16 +136,6 @@ beside checkpoints. It does not update encoder weights.
 
 The import name remains `things_eeg2`. Configuration classes, datasets, and
 losses are re-exported from `things_eeg2.train` for existing analysis callers.
-
-## Tests
-
-From this directory:
-
-```sh
-python -m unittest discover -s tests -v
-```
-
-Tests use synthetic tensors and need no downloaded model or EEG dataset.
 
 The model follows [SAMGA](https://arxiv.org/abs/2604.17782); coordinate recovery
 is inspired by [SCORE](https://arxiv.org/abs/2608.19134). Visual LoRA and the
