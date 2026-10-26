@@ -21,13 +21,13 @@ the kernel after editing Python code during a notebook session.
 
 ## Data and pretrained weights
 
-Large files stay outside this code directory:
+Datasets, pretrained weights, and training outputs stay local and are ignored by Git:
 
 ```text
 EEG2Image/
-  samga/
-    things_eeg2/
-    train_things_eeg2.ipynb
+  things_eeg2/
+  tests/
+  train_things_eeg2.ipynb
   training_data/nm000232/
     derivatives/nice_250hz/sub-XX/
       averaged_eeg_training.npy
@@ -43,7 +43,7 @@ EEG2Image/
   checkpoints/
 ```
 
-Relative paths resolve against the parent of `samga/`, independently of the
+Relative paths resolve against the repository root, independently of the
 working directory. Set `EEG2IMAGE_ROOT` before starting Python to use another
 workspace, or provide absolute configuration paths. Previously saved
 workspace-relative checkpoint configurations remain readable.

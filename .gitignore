@@ -5,3 +5,6 @@ __pycache__/
 .venv/
 build/
 dist/
+/training_data/
+/models/
+/checkpoints/

@@ -3,7 +3,7 @@
 from pathlib import Path
 import os
 
-WORKSPACE_ROOT = Path(os.environ.get("EEG2IMAGE_ROOT", Path(__file__).resolve().parents[2])).resolve()
+WORKSPACE_ROOT = Path(os.environ.get("EEG2IMAGE_ROOT", Path(__file__).resolve().parents[1])).resolve()
 
 
 def workspace_path(value: str | Path) -> Path:
